@@ -7,7 +7,6 @@ module Fastlane
         access_token = Helper::HuaweiAppgalleryHelperV2.request_access_token(params[:client_id], params[:client_secret])
         Helper::HuaweiAppgalleryHelperV2.update_release_notes(params[:client_id], access_token, params[:app_id], params[:release_notes])
         Helper::HuaweiAppgalleryHelperV2.upload_apk(params[:client_id], access_token, params[:app_id], params[:apk_path])
-        Helper::HuaweiAppgalleryHelperV2.submit_app(params[:client_id], access_token, params[:app_id])
         UI.message('Finished!')
       end
 
